@@ -1,0 +1,228 @@
+.container {
+    /* background: linear-gradient(to right, var(--level-3), var(--level-5)); */
+    background: linear-gradient(to right, var(--level-4), var(--level-7));
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 80vh; */
+    width: 100%;
+    color: white;
+    margin-top: -20px;
+    padding: 2rem;
+}
+
+.title {
+    /* font-size: 2.5rem; */
+    margin-bottom: 2rem;
+    color: var(--level-11);
+}
+
+/* .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+} */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    perspective: 1000px;
+    /* Habilita efecto 3D */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    /* Centrado completamente */
+    /* height: 400px; */
+}
+
+.card:hover {
+    transform: rotateX(15deg) translateZ(-10px);
+    /* 👈 Inclinación hacia atrás */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    perspective: 1000px;
+    /* 👈 Esto permite el efecto 3D */
+}
+
+
+.imageWrapper {
+    width: 100%;
+    /* height: 180px; */
+    height: 400px;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .imageWrapper img {
+    transform: scale(1.05);
+}
+
+.info {
+    padding: 1rem;
+    color: var(--level-11);
+}
+
+.info h2 {
+    margin: 0 0 0.5rem;
+    /* font-size: 1.25rem; */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 0;
+    /* font-size: 1rem; */
+    font-size: 0.9rem;
+
+
+    /* color: #ddd; */
+    color: var(--level-11);
+}
+
+.iconsList {
+    display: flex;
+    flex-direction: row;
+    padding: 10px !important;
+    flex-wrap: wrap;
+    background: var(--level-6);
+    width: 500px;
+    gap: 10px;
+}
+
+/* .iconsWrapper {
+    width: 500px;
+    overflow: hidden;
+    background: var(--level-6);
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 10px;
+  } */
+
+
+
+.iconsList {
+    display: flex;
+    flex-direction: row;
+    padding: 10px !important;
+    flex-wrap: wrap;
+    /* background: var(--level-6); */
+    width: 1150px;
+    gap: 40px;
+    background: unset;
+}
+
+.iconsList {
+    display: flex;
+    animation: scrollIcons 20s linear infinite;
+}
+
+.icon {
+    min-width: 50px;
+    margin-right: 20px;
+    font-size: 30px;
+
+}
+
+@keyframes scrollIcons {
+    0% {
+        transform: translateX(40%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* evaluar eliminar */
+.iconFront {
+    /* margin-right: -10px; */
+    font-size: 30px;
+    width: 35px;
+}
+
+.iconVertical {
+    /* margin-right: -10px; */
+    font-size: 30px;
+    width: 35px;
+}
+
+.iconBack {
+    /* margin-right: 20px; */
+    font-size: 30px;
+    width: 35px;
+}
+
+
+.frontDiv{
+    font-size: 0.7rem;
+    /* margin: auto; */
+    margin-top: -8px;;
+    margin-left: 6px;
+}
+
+
+.titleContainer {
+    display: flex;
+}
+
+.siteName {
+    width: 50%;
+}
+
+.gitHub {
+    width: 50%;
+    margin-top: -15px;
+    display: flex;
+    justify-content: end;
+}
+
+.gitHubSub{
+    display: flex;
+}
